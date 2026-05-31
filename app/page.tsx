@@ -25,7 +25,7 @@ export default function LandingPage() {
         {/* Background photo + overlays */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1573632400288-4390dee9df40?fm=jpg&q=80&w=1920&auto=format&fit=crop)' }} />
+            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1752316435365-1c4a35acfed2?fm=jpg&q=80&w=1920&auto=format&fit=crop)' }} />
           {/* Dark base overlay */}
           <div className="absolute inset-0 bg-slate-950/75" />
           {/* Orange fire glow from bottom */}
