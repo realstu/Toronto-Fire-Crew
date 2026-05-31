@@ -78,7 +78,10 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <p className="text-center text-slate-600 text-sm mt-5">
+        <p className="text-center text-slate-600 text-sm mt-3">
+          <Link href="/forgot-password" className="text-slate-500 hover:text-red-400 transition-colors">Forgot password?</Link>
+        </p>
+        <p className="text-center text-slate-600 text-sm mt-2">
           Not a member?{' '}
           <Link href="/request-access" className="text-red-400 hover:underline">Request access</Link>
         </p>
