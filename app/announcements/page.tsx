@@ -18,7 +18,7 @@ export default async function AnnouncementsPage() {
       <Navbar />
       <main className="max-w-3xl mx-auto px-4 py-10 w-full">
         <div className="flex items-center gap-3 mb-8">
-          <div className="bg-orange-500/10 border border-orange-500/20 text-orange-400 w-10 h-10 rounded-xl flex items-center justify-center">
+          <div className="bg-red-600/10 border border-red-600/20 text-red-400 w-10 h-10 rounded-xl flex items-center justify-center">
             <Megaphone size={18} />
           </div>
           <div>
@@ -39,7 +39,7 @@ export default async function AnnouncementsPage() {
                 <div className="flex items-start justify-between gap-4 mb-2">
                   <h2 className="font-bold text-white text-base">{a.title}</h2>
                   {a.pinned && (
-                    <span className="flex items-center gap-1 text-orange-400 text-xs font-medium shrink-0">
+                    <span className="flex items-center gap-1 text-red-400 text-xs font-medium shrink-0">
                       <Pin size={11} /> Pinned
                     </span>
                   )}

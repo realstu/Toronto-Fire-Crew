@@ -21,7 +21,7 @@ export default async function AdminPage() {
       <Navbar isAdmin />
       <main className="max-w-4xl mx-auto px-4 py-10 w-full">
         <div className="flex items-center gap-3 mb-8">
-          <div className="bg-orange-500/10 border border-orange-500/20 text-orange-400 w-10 h-10 rounded-xl flex items-center justify-center">
+          <div className="bg-red-600/10 border border-red-600/20 text-red-400 w-10 h-10 rounded-xl flex items-center justify-center">
             <Shield size={18} />
           </div>
           <div>
@@ -53,7 +53,7 @@ export default async function AdminPage() {
                     <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
                       r.status === 'approved' ? 'bg-emerald-500/10 text-emerald-400' :
                       r.status === 'rejected' ? 'bg-red-500/10 text-red-400' :
-                      'bg-orange-500/10 text-orange-400'
+                      'bg-red-600/10 text-red-400'
                     }`}>
                       {r.status || 'pending'}
                     </span>

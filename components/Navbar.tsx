@@ -28,7 +28,7 @@ export default function Navbar({ isAdmin }: { isAdmin?: boolean }) {
     <nav className="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-white/[0.06]">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
         <Link href="/dashboard" className="flex items-center gap-2 font-bold text-white">
-          <div className="bg-orange-500 text-white rounded-lg p-1.5">
+          <div className="bg-red-600 text-white rounded-lg p-1.5">
             <Flame size={15} />
           </div>
           <span className="text-sm">Toronto Fire Crew</span>
@@ -69,7 +69,7 @@ export default function Navbar({ isAdmin }: { isAdmin?: boolean }) {
           {NAV.map(({ href, label, icon: Icon }) => (
             <Link key={href} href={href} onClick={() => setOpen(false)}
               className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium ${
-                pathname === href ? 'bg-orange-500/15 text-orange-400' : 'text-slate-400'
+                pathname === href ? 'bg-red-600/15 text-red-400' : 'text-slate-400'
               }`}>
               <Icon size={14} /> {label}
             </Link>

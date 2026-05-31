@@ -62,7 +62,7 @@ export default function ForumPage() {
             </div>
           </div>
           <button onClick={() => setShowNew(!showNew)}
-            className="flex items-center gap-1.5 bg-orange-500 hover:bg-orange-400 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors">
+            className="flex items-center gap-1.5 bg-red-600 hover:bg-red-400 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors">
             <Plus size={15} /> New Post
           </button>
         </div>
@@ -75,12 +75,12 @@ export default function ForumPage() {
                 <label className="block text-xs font-medium text-slate-400 mb-1.5">Title</label>
                 <input required value={form.title} onChange={e => setForm({ ...form, title: e.target.value })}
                   placeholder="Post title"
-                  className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-slate-600" />
+                  className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-slate-600" />
               </div>
               <div className="col-span-2">
                 <label className="block text-xs font-medium text-slate-400 mb-1.5">Category</label>
                 <select value={form.category} onChange={e => setForm({ ...form, category: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors">
+                  className="w-full bg-slate-900 border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors">
                   {CATEGORIES.map(c => <option key={c}>{c}</option>)}
                 </select>
               </div>
@@ -89,11 +89,11 @@ export default function ForumPage() {
               <label className="block text-xs font-medium text-slate-400 mb-1.5">Message</label>
               <textarea required value={form.body} onChange={e => setForm({ ...form, body: e.target.value })}
                 rows={4} placeholder="What's on your mind?"
-                className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors resize-none placeholder:text-slate-600" />
+                className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors resize-none placeholder:text-slate-600" />
             </div>
             <div className="flex gap-3">
               <button type="submit" disabled={submitting}
-                className="bg-orange-500 hover:bg-orange-400 disabled:opacity-60 text-white font-bold py-2 px-5 rounded-xl transition-colors text-sm">
+                className="bg-red-600 hover:bg-red-400 disabled:opacity-60 text-white font-bold py-2 px-5 rounded-xl transition-colors text-sm">
                 {submitting ? 'Posting...' : 'Post'}
               </button>
               <button type="button" onClick={() => setShowNew(false)}

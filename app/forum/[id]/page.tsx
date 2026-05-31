@@ -119,12 +119,12 @@ export default function ForumPostPage() {
             onChange={e => setBody(e.target.value)}
             rows={3}
             placeholder="Write your reply..."
-            className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors resize-none placeholder:text-slate-600 mb-3"
+            className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors resize-none placeholder:text-slate-600 mb-3"
           />
           <button
             type="submit"
             disabled={submitting || !body.trim()}
-            className="flex items-center gap-1.5 bg-orange-500 hover:bg-orange-400 disabled:opacity-50 text-white font-bold text-sm px-4 py-2 rounded-lg transition-colors"
+            className="flex items-center gap-1.5 bg-red-600 hover:bg-red-400 disabled:opacity-50 text-white font-bold text-sm px-4 py-2 rounded-lg transition-colors"
           >
             <Send size={13} /> {submitting ? 'Posting...' : 'Post Reply'}
           </button>

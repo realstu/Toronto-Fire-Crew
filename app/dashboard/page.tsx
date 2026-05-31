@@ -18,7 +18,7 @@ export default async function DashboardPage() {
 
         {/* Welcome */}
         <div className="mb-10">
-          <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-medium px-3 py-1 rounded-full mb-3">
+          <div className="inline-flex items-center gap-2 bg-red-600/10 border border-red-600/20 text-red-400 text-xs font-medium px-3 py-1 rounded-full mb-3">
             <Flame size={11} /> Members Area
           </div>
           <h1 className="text-3xl font-extrabold text-white">Welcome back, {firstName}</h1>
@@ -35,7 +35,7 @@ export default async function DashboardPage() {
             <Link key={href} href={href}
               className="group bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.07] hover:border-red-500/20 rounded-2xl p-5 transition-all">
               <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${
-                color === 'orange' ? 'bg-orange-500/10 border border-orange-500/20 text-orange-400' :
+                color === 'orange' ? 'bg-red-600/10 border border-red-600/20 text-red-400' :
                 'bg-red-600/10 border border-red-600/20 text-red-400'
               }`}>
                 <Icon size={18} />

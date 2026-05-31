@@ -68,7 +68,7 @@ export default function ShiftsPage() {
       <main className="max-w-3xl mx-auto px-4 py-10 w-full">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
-            <div className="bg-orange-500/10 border border-orange-500/20 text-orange-400 w-10 h-10 rounded-xl flex items-center justify-center">
+            <div className="bg-red-600/10 border border-red-600/20 text-red-400 w-10 h-10 rounded-xl flex items-center justify-center">
               <ArrowLeftRight size={18} />
             </div>
             <div>
@@ -77,7 +77,7 @@ export default function ShiftsPage() {
             </div>
           </div>
           <button onClick={() => setShowNew(!showNew)}
-            className="flex items-center gap-1.5 bg-orange-500 hover:bg-orange-400 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors">
+            className="flex items-center gap-1.5 bg-red-600 hover:bg-red-400 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors">
             <Plus size={15} /> Post Shift
           </button>
         </div>
@@ -89,12 +89,12 @@ export default function ShiftsPage() {
               <div>
                 <label className="block text-xs font-medium text-slate-400 mb-1.5">Shift Date</label>
                 <input type="date" required value={form.shift_date} onChange={e => setForm({ ...form, shift_date: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors" />
+                  className="w-full bg-slate-900 border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors" />
               </div>
               <div>
                 <label className="block text-xs font-medium text-slate-400 mb-1.5">Platoon</label>
                 <select value={form.platoon} onChange={e => setForm({ ...form, platoon: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors">
+                  className="w-full bg-slate-900 border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors">
                   {PLATOONS.map(p => <option key={p}>{p}</option>)}
                 </select>
               </div>
@@ -102,18 +102,18 @@ export default function ShiftsPage() {
                 <label className="block text-xs font-medium text-slate-400 mb-1.5">Station</label>
                 <input required value={form.station} onChange={e => setForm({ ...form, station: e.target.value })}
                   placeholder="e.g. Station 312"
-                  className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-slate-600" />
+                  className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-slate-600" />
               </div>
               <div className="col-span-2">
                 <label className="block text-xs font-medium text-slate-400 mb-1.5">Notes <span className="text-slate-600">(optional)</span></label>
                 <textarea value={form.notes} onChange={e => setForm({ ...form, notes: e.target.value })}
                   rows={2} placeholder="Any details about the swap..."
-                  className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors resize-none placeholder:text-slate-600" />
+                  className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors resize-none placeholder:text-slate-600" />
               </div>
             </div>
             <div className="flex gap-3">
               <button type="submit" disabled={submitting}
-                className="bg-orange-500 hover:bg-orange-400 disabled:opacity-60 text-white font-bold py-2 px-5 rounded-xl transition-colors text-sm">
+                className="bg-red-600 hover:bg-red-400 disabled:opacity-60 text-white font-bold py-2 px-5 rounded-xl transition-colors text-sm">
                 {submitting ? 'Posting...' : 'Post Shift'}
               </button>
               <button type="button" onClick={() => setShowNew(false)}
@@ -138,7 +138,7 @@ export default function ShiftsPage() {
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2 flex-wrap">
-                      <span className="text-xs font-semibold bg-orange-500/10 border border-orange-500/20 text-orange-400 px-2 py-0.5 rounded-full">{shift.platoon}</span>
+                      <span className="text-xs font-semibold bg-red-600/10 border border-red-600/20 text-red-400 px-2 py-0.5 rounded-full">{shift.platoon}</span>
                       {shift.status === 'claimed' && (
                         <span className="flex items-center gap-1 text-xs font-medium text-slate-500">
                           <CheckCircle size={11} /> Claimed

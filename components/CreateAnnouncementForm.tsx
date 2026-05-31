@@ -32,7 +32,7 @@ export default function CreateAnnouncementForm() {
         <h2 className="text-white font-bold">Post Announcement</h2>
         <button
           onClick={() => setShow(!show)}
-          className="flex items-center gap-1.5 bg-orange-500 hover:bg-orange-400 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+          className="flex items-center gap-1.5 bg-red-600 hover:bg-red-400 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
         >
           <Plus size={15} /> New Announcement
         </button>
@@ -53,7 +53,7 @@ export default function CreateAnnouncementForm() {
               value={form.title}
               onChange={e => setForm({ ...form, title: e.target.value })}
               placeholder="Announcement title"
-              className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-slate-600"
+              className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-slate-600"
             />
           </div>
           <div>
@@ -64,7 +64,7 @@ export default function CreateAnnouncementForm() {
               onChange={e => setForm({ ...form, body: e.target.value })}
               rows={4}
               placeholder="Write your announcement..."
-              className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors resize-none placeholder:text-slate-600"
+              className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors resize-none placeholder:text-slate-600"
             />
           </div>
           <label className="flex items-center gap-2 cursor-pointer">
@@ -72,7 +72,7 @@ export default function CreateAnnouncementForm() {
               type="checkbox"
               checked={form.pinned}
               onChange={e => setForm({ ...form, pinned: e.target.checked })}
-              className="w-4 h-4 accent-orange-500"
+              className="w-4 h-4 accent-red-600"
             />
             <span className="text-sm text-slate-400">Pin this announcement</span>
           </label>
@@ -80,7 +80,7 @@ export default function CreateAnnouncementForm() {
             <button
               type="submit"
               disabled={submitting}
-              className="bg-orange-500 hover:bg-orange-400 disabled:opacity-60 text-white font-bold py-2 px-5 rounded-xl transition-colors text-sm"
+              className="bg-red-600 hover:bg-red-400 disabled:opacity-60 text-white font-bold py-2 px-5 rounded-xl transition-colors text-sm"
             >
               {submitting ? 'Posting...' : 'Post'}
             </button>

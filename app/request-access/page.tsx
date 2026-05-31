@@ -27,7 +27,7 @@ export default function RequestAccessPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2.5 font-bold text-xl text-white mb-2">
-            <div className="bg-orange-500 text-white rounded-lg p-1.5">
+            <div className="bg-red-600 text-white rounded-lg p-1.5">
               <Flame size={18} />
             </div>
             Toronto Fire Crew
@@ -37,7 +37,7 @@ export default function RequestAccessPage() {
 
         {submitted ? (
           <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-10 text-center">
-            <CheckCircle size={48} className="text-orange-500 mx-auto mb-4" />
+            <CheckCircle size={48} className="text-red-600 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-white mb-2">Request Sent</h3>
             <p className="text-slate-500 text-sm">Your request has been submitted. You&apos;ll receive an invite by email once approved.</p>
           </div>
@@ -56,7 +56,7 @@ export default function RequestAccessPage() {
                 <label className="block text-xs font-medium text-slate-400 mb-1.5">{field.label}</label>
                 <input name={field.name} required value={form[field.name as keyof typeof form]}
                   onChange={handleChange} placeholder={field.placeholder}
-                  className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-slate-600" />
+                  className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-slate-600" />
               </div>
             ))}
             <div>
@@ -64,10 +64,10 @@ export default function RequestAccessPage() {
               <textarea name="notes" value={form.notes} onChange={handleChange}
                 placeholder="Who referred you? Any other context..."
                 rows={3}
-                className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-orange-500/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-slate-600 resize-none" />
+                className="w-full bg-white/[0.04] border border-white/[0.08] focus:border-red-600/50 rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-slate-600 resize-none" />
             </div>
             <button type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-3 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+              className="w-full bg-red-600 hover:bg-red-400 text-white font-bold py-3 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
               Submit Request <ArrowRight size={15} />
             </button>
           </form>
@@ -75,7 +75,7 @@ export default function RequestAccessPage() {
 
         <p className="text-center text-slate-600 text-sm mt-5">
           Already have access?{' '}
-          <Link href="/login" className="text-orange-400 hover:underline">Sign in</Link>
+          <Link href="/login" className="text-red-400 hover:underline">Sign in</Link>
         </p>
       </div>
     </main>
