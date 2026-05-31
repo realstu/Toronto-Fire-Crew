@@ -1,65 +1,77 @@
-import Image from "next/image";
+import Link from 'next/link'
+import { Flame, MessageSquare, ArrowLeftRight, Megaphone, Lock } from 'lucide-react'
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-slate-950 flex flex-col">
+
+      {/* Header */}
+      <header className="border-b border-white/[0.06] px-6 py-4 flex items-center justify-between max-w-5xl mx-auto w-full">
+        <div className="flex items-center gap-2.5 font-bold text-lg text-white">
+          <div className="bg-orange-500 text-white rounded-lg p-1.5">
+            <Flame size={17} />
+          </div>
+          Toronto Fire Crew
+        </div>
+        <Link href="/login"
+          className="bg-orange-500 hover:bg-orange-400 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors">
+          Member Login
+        </Link>
+      </header>
+
+      {/* Hero */}
+      <section className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-[-10%] left-[50%] -translate-x-1/2 w-[700px] h-[500px] bg-orange-500/8 rounded-full blur-[120px]" />
+        </div>
+        <div className="relative max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-medium px-3 py-1.5 rounded-full mb-6">
+            <Lock size={12} /> Members Only — Invite Required
+          </div>
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-5">
+            Toronto Fire Crew
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-slate-400 text-lg max-w-xl mx-auto mb-10">
+            A private community for Toronto Fire Service members. Discussions, shift swaps, and announcements — all in one place.
           </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/login"
+              className="bg-orange-500 hover:bg-orange-400 text-white font-bold px-8 py-3.5 rounded-xl transition-colors text-base">
+              Sign In
+            </Link>
+            <Link href="/request-access"
+              className="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors text-base">
+              Request Access
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      {/* Features */}
+      <section className="max-w-4xl mx-auto px-4 pb-20 grid sm:grid-cols-3 gap-5 w-full">
+        {[
+          { icon: MessageSquare, title: 'Forum', desc: 'Threaded discussions by topic. Say what needs to be said.' },
+          { icon: ArrowLeftRight, title: 'Shift Swaps', desc: 'Post and find shift trades with fellow members.' },
+          { icon: Megaphone, title: 'Announcements', desc: 'Important updates posted by admins — never miss a thing.' },
+        ].map((f) => {
+          const Icon = f.icon
+          return (
+            <div key={f.title} className="bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6">
+              <div className="bg-orange-500/10 border border-orange-500/20 text-orange-400 w-10 h-10 rounded-xl flex items-center justify-center mb-4">
+                <Icon size={18} />
+              </div>
+              <h3 className="font-bold text-white mb-1.5">{f.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{f.desc}</p>
+            </div>
+          )
+        })}
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/[0.06] text-slate-600 text-xs text-center py-5 px-4">
+        Toronto Fire Crew is an independent member community. Not affiliated with or endorsed by TPFFA or Toronto Fire Services.
+      </footer>
+
+    </main>
+  )
 }
