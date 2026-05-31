@@ -22,12 +22,18 @@ export default function LandingPage() {
       {/* Hero */}
       <section className="relative flex flex-col items-center justify-center text-center px-6 pt-16 pb-32 min-h-[88vh]">
 
-        {/* Fire glow */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute bottom-[-5%] left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full blur-[140px]"
-            style={{ background: 'radial-gradient(ellipse, rgba(249,115,22,0.18) 0%, rgba(220,38,38,0.10) 50%, transparent 75%)' }} />
-          <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-[400px] h-[300px] rounded-full blur-[80px]"
-            style={{ background: 'radial-gradient(ellipse, rgba(249,115,22,0.12) 0%, transparent 70%)' }} />
+        {/* Background photo + overlays */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1573632400288-4390dee9df40?fm=jpg&q=80&w=1920&auto=format&fit=crop)' }} />
+          {/* Dark base overlay */}
+          <div className="absolute inset-0 bg-slate-950/75" />
+          {/* Orange fire glow from bottom */}
+          <div className="absolute inset-0"
+            style={{ background: 'radial-gradient(ellipse at 50% 110%, rgba(249,115,22,0.35) 0%, rgba(220,38,38,0.15) 40%, transparent 70%)' }} />
+          {/* Vignette top */}
+          <div className="absolute inset-0"
+            style={{ background: 'linear-gradient(to bottom, rgba(2,6,23,0.6) 0%, transparent 40%, transparent 60%, rgba(2,6,23,0.8) 100%)' }} />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
