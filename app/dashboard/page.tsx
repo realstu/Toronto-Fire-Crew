@@ -30,7 +30,7 @@ export default async function DashboardPage() {
           {[
             { href: '/announcements', icon: Megaphone, label: 'Announcements', desc: 'Latest updates from admin', color: 'orange' },
             { href: '/forum', icon: MessageSquare, label: 'Forum', desc: 'Join the discussion', color: 'red' },
-            { href: '/shifts', icon: ArrowLeftRight, label: 'Shift Swaps', desc: 'Post or find a trade', color: 'orange' },
+            { href: '/shifts', icon: ArrowLeftRight, label: 'Duty Exchanges', desc: 'Post or find a trade', color: 'orange' },
           ].map(({ href, icon: Icon, label, desc, color }) => (
             <Link key={href} href={href}
               className="group bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.07] hover:border-red-500/20 rounded-2xl p-5 transition-all">

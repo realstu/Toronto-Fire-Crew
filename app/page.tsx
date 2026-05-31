@@ -52,7 +52,7 @@ export default function LandingPage() {
           </h1>
 
           <p className="text-slate-400 text-lg max-w-lg mx-auto mb-12 leading-relaxed">
-            A private community for Toronto Fire Service members. Discussions, shift swaps, and announcements — all in one place.
+            A private community built on transparency and open communication for Toronto Fire Service members. Discussions, duty exchanges, and announcements — all in one place.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -103,7 +103,7 @@ export default function LandingPage() {
             },
             {
               icon: ArrowLeftRight,
-              title: 'Shift Swaps',
+              title: 'Duty Exchanges',
               desc: 'Post a shift you need covered or pick one up. Platoon, station, date — everything you need to sort a trade fast.',
               accent: 'red',
             },

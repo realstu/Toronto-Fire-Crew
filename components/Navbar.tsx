@@ -10,7 +10,7 @@ const NAV = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/announcements', label: 'Announcements', icon: Megaphone },
   { href: '/forum', label: 'Forum', icon: MessageSquare },
-  { href: '/shifts', label: 'Shift Swaps', icon: ArrowLeftRight },
+  { href: '/shifts', label: 'Duty Exchanges', icon: ArrowLeftRight },
 ]
 
 export default function Navbar({ isAdmin }: { isAdmin?: boolean }) {

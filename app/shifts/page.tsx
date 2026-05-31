@@ -72,7 +72,7 @@ export default function ShiftsPage() {
               <ArrowLeftRight size={18} />
             </div>
             <div>
-              <h1 className="text-2xl font-extrabold text-white">Shift Swaps</h1>
+              <h1 className="text-2xl font-extrabold text-white">Duty Exchanges</h1>
               <p className="text-slate-500 text-sm">Post a shift you need covered or pick one up.</p>
             </div>
           </div>
