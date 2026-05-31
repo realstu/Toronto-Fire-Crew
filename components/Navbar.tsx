@@ -39,7 +39,7 @@ export default function Navbar({ isAdmin }: { isAdmin?: boolean }) {
           {NAV.map(({ href, label, icon: Icon }) => (
             <Link key={href} href={href}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                pathname === href ? 'bg-orange-500/15 text-orange-400' : 'text-slate-400 hover:text-white hover:bg-white/[0.05]'
+                pathname === href ? 'bg-red-600/15 text-red-400' : 'text-slate-400 hover:text-white hover:bg-white/[0.05]'
               }`}>
               <Icon size={14} /> {label}
             </Link>
@@ -47,7 +47,7 @@ export default function Navbar({ isAdmin }: { isAdmin?: boolean }) {
           {isAdmin && (
             <Link href="/admin"
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                pathname.startsWith('/admin') ? 'bg-orange-500/15 text-orange-400' : 'text-slate-400 hover:text-white hover:bg-white/[0.05]'
+                pathname.startsWith('/admin') ? 'bg-red-600/15 text-red-400' : 'text-slate-400 hover:text-white hover:bg-white/[0.05]'
               }`}>
               <Shield size={14} /> Admin
             </Link>

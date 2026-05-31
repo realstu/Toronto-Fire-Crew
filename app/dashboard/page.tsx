@@ -29,15 +29,14 @@ export default async function DashboardPage() {
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           {[
             { href: '/announcements', icon: Megaphone, label: 'Announcements', desc: 'Latest updates from admin', color: 'orange' },
-            { href: '/forum', icon: MessageSquare, label: 'Forum', desc: 'Join the discussion', color: 'blue' },
-            { href: '/shifts', icon: ArrowLeftRight, label: 'Shift Swaps', desc: 'Post or find a trade', color: 'emerald' },
+            { href: '/forum', icon: MessageSquare, label: 'Forum', desc: 'Join the discussion', color: 'red' },
+            { href: '/shifts', icon: ArrowLeftRight, label: 'Shift Swaps', desc: 'Post or find a trade', color: 'orange' },
           ].map(({ href, icon: Icon, label, desc, color }) => (
             <Link key={href} href={href}
-              className="group bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.07] hover:border-white/[0.12] rounded-2xl p-5 transition-all">
+              className="group bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.07] hover:border-red-500/20 rounded-2xl p-5 transition-all">
               <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${
                 color === 'orange' ? 'bg-orange-500/10 border border-orange-500/20 text-orange-400' :
-                color === 'blue' ? 'bg-blue-500/10 border border-blue-500/20 text-blue-400' :
-                'bg-emerald-500/10 border border-emerald-500/20 text-emerald-400'
+                'bg-red-600/10 border border-red-600/20 text-red-400'
               }`}>
                 <Icon size={18} />
               </div>

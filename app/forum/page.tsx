@@ -53,7 +53,7 @@ export default function ForumPage() {
       <main className="max-w-3xl mx-auto px-4 py-10 w-full">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
-            <div className="bg-blue-500/10 border border-blue-500/20 text-blue-400 w-10 h-10 rounded-xl flex items-center justify-center">
+            <div className="bg-red-600/10 border border-red-600/20 text-red-400 w-10 h-10 rounded-xl flex items-center justify-center">
               <MessageSquare size={18} />
             </div>
             <div>
