@@ -16,9 +16,8 @@ export default function ForgotPasswordPage() {
     setLoading(true)
     setError('')
     const supabase = createClient()
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || window.location.origin
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${siteUrl}/auth/callback?next=/update-password`,
+      redirectTo: `https://toronto-fire-crew.vercel.app/auth/callback?next=/update-password`,
     })
     if (error) {
       setError('Something went wrong. Check the email address and try again.')
