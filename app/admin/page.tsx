@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/Navbar'
+import CreateAnnouncementForm from '@/components/CreateAnnouncementForm'
 import { Shield } from 'lucide-react'
 
 const ADMIN_EMAIL = 'stuartoggrealtor@gmail.com'
@@ -28,6 +29,8 @@ export default async function AdminPage() {
             <p className="text-slate-500 text-sm">Manage members and access requests.</p>
           </div>
         </div>
+
+        <CreateAnnouncementForm />
 
         <h2 className="text-white font-bold mb-4">Access Requests</h2>
         <div className="space-y-3">
