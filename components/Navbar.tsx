@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
-import { Flame, LayoutDashboard, MessageSquare, ArrowLeftRight, Megaphone, LogOut, Menu, X, Shield } from 'lucide-react'
+import { Flame, LayoutDashboard, MessageSquare, ArrowLeftRight, Megaphone, LogOut, Menu, X, Shield, User } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 
 const NAV = [
@@ -52,6 +52,12 @@ export default function Navbar({ isAdmin }: { isAdmin?: boolean }) {
               <Shield size={14} /> Admin
             </Link>
           )}
+          <Link href="/profile"
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+              pathname === '/profile' ? 'bg-red-600/15 text-red-400' : 'text-slate-400 hover:text-white hover:bg-white/[0.05]'
+            }`}>
+            <User size={14} /> Profile
+          </Link>
           <button onClick={signOut}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-slate-500 hover:text-white transition-colors ml-2">
             <LogOut size={14} /> Sign Out
@@ -80,6 +86,12 @@ export default function Navbar({ isAdmin }: { isAdmin?: boolean }) {
               <Shield size={14} /> Admin
             </Link>
           )}
+          <Link href="/profile" onClick={() => setOpen(false)}
+            className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium ${
+              pathname === '/profile' ? 'bg-red-600/15 text-red-400' : 'text-slate-400'
+            }`}>
+            <User size={14} /> Profile
+          </Link>
           <button onClick={signOut}
             className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-500 text-left">
             <LogOut size={14} /> Sign Out

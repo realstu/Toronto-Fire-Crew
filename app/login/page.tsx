@@ -18,12 +18,17 @@ export default function LoginPage() {
     setLoading(true)
     setError('')
     const supabase = createClient()
-    const { error } = await supabase.auth.signInWithPassword({ email: form.email, password: form.password })
+    const { data, error } = await supabase.auth.signInWithPassword({ email: form.email, password: form.password })
     if (error) {
       setError('Invalid email or password.')
       setLoading(false)
     } else {
-      router.push('/dashboard')
+      const { data: profile } = await supabase.from('tfc_profiles').select('id').eq('id', data.user.id).single()
+      if (!profile) {
+        router.push('/profile/setup')
+      } else {
+        router.push('/dashboard')
+      }
       router.refresh()
     }
   }
